@@ -8,6 +8,14 @@ const scene = new THREE.Scene();
 // create our sphere or the ball. 
 // below the 3 is the radius and the 64's represent the height and width segements. 
 const geometry = new THREE.SphereGeometry( 3, 64, 64 );
+const ello = new THREE.TorusGeometry( 10, 3, 16, 100 );
+const ello_material = new THREE.MeshStandardMaterial( {
+   color: 0xFFFFFF, 
+   roughness: 0.1, 
+} );
+const torus = new THREE.Mesh( ello, ello_material );
+scene.add( torus );
+
 
 //add texture or looks to the ball
 const material = new THREE.MeshStandardMaterial( { 
