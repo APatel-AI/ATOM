@@ -19,6 +19,7 @@ html{
 }
 
 
+
 nav{
   color: whitesmoke;
   z-index: 2;
@@ -51,4 +52,16 @@ nav ul{
   left: 50%;
   top: 75%;
   transform: translate(-50%, -25%);
+}
+#bottom{
+  position: absolute;
+  bottom: 0;
+  right: 1;
+  z-index: 2;
+  color: white;
+  font-size:  0.9rem;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+
+
 }
