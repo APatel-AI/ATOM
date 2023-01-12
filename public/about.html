@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atom</title>
+    <link rel = "about.css"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"/>
+
+    <style>
+      body {  background-image: url('leaf.jpg'); background-repeat: no-repeat; background-size: cover;}
+      html{ overflow-x: hidden; font-family: "Poppins", sans-serif;}
+      .webgl{ position: absolute; top: 0; left: 0; z-index: 1;}
+
+
+
+
+nav{
+  color: whitesmoke;
+  z-index: 2;
+  position: relative;
+  padding: 4rem 8rem;
+  display: flex; 
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+
+
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+
+}
+
+.title{
+  color: whitesmoke;
+  z-index: 2;
+  position: absolute;
+  font-size:  3rem;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -25%);
+}
+#bottom{
+  position: absolute;
+  bottom: 0;
+  right: 1;
+  z-index: 2;
+  color: white;
+  font-size:  0.9rem;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+
+
+}
+    </style>
+
+  </head>
+
+  <body>
+
+    <canvas class = "webgl"></canvas>
+    <nav>
+      <ul>
+        <li><a href="/">Home </a></li>
+        <li><a href="./about.html">About </a></li>
+      </ul>
+      
+
+      
+    </nav>
+
+    <h1 class="title"> A T O M  </h1>
+    <div id ="bottom">
+      Design by: Arpan Patel 
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
