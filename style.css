@@ -20,6 +20,11 @@ html{
 
 
 
+.about_background{
+  background-color: black;
+
+
+}
 nav{
   color: whitesmoke;
   z-index: 2;
