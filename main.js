@@ -262,6 +262,23 @@ window.addEventListener('mousemove', (e) => {
       })
   }
 
+  let two_newColor = new THREE.Color(`rgb(${rgb.join(",")})`)
+  gsap.to(twoball_mesh.material.color, {
+    r: two_newColor.r,
+    g: two_newColor.g,
+    b: two_newColor.b,
+
+  })
+
+  let three_newColor = new THREE.Color(`rgb(${rgb.join(",")})`)
+  gsap.to(threeball_mesh.material.color, {
+    r: three_newColor.r,
+    g: three_newColor.g,
+    b: three_newColor.b,
+
+  })
+
+
 
 
 
