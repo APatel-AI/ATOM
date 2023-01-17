@@ -10,6 +10,16 @@ const scene = new THREE.Scene();
 // below the 3 is the radius and the 64's represent the height and width segements. 
 const geometry = new THREE.SphereGeometry( 1, 64, 64 );
 
+//2nd ball 
+const twoball = new THREE.SphereGeometry (1,40,40); 
+
+//3rd ball
+const threeball = new THREE.SphereGeometry (1,40,40); 
+
+//4th ball 
+const fourthball = new THREE.SphereGeometry (1, 40, 40); 
+
+
 
 // creating the 1st ring: 
 const ring1 = new THREE.TorusGeometry( 7.8, .5, 30, 100 );
@@ -91,6 +101,41 @@ const material = new THREE.MeshStandardMaterial( {
 const mesh = new THREE.Mesh(geometry, material); 
 scene.add(mesh)
 
+// creating and postioning the twoball
+const twoball_material = new THREE.MeshStandardMaterial ({
+  color: "#00FF00", 
+  roughness: 0.5,
+})
+
+const twoball_mesh = new THREE.Mesh(twoball, twoball_material);
+twoball_mesh.position.set(1,0,1);
+scene.add(twoball_mesh)
+
+// creating and postioning the threeball color: white
+const threeball_material = new THREE.MeshStandardMaterial ({
+  color: "#FFFFFF", 
+  roughness: 0.5,
+})
+
+const threeball_mesh = new THREE.Mesh(threeball, threeball_material);
+threeball_mesh.position.set(0,1,1.4);
+scene.add(threeball_mesh)
+
+
+
+
+
+
+
+// creating and postioning the fourthball
+const fourthball_material = new THREE.MeshStandardMaterial ({
+  color: "#FFD700", 
+  roughness: 0.5,
+})
+
+const fourthball_mesh = new THREE.Mesh(fourthball, fourthball_material);
+fourthball_mesh.position.set(1,1,1);
+scene.add(fourthball_mesh)
 
 
 
