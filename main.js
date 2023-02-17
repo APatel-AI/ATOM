@@ -21,28 +21,47 @@ const fourthball = new THREE.SphereGeometry (1, 40, 40);
 
 
 
+// create atom element1
+const element1 = new THREE.SphereGeometry (0.6,10,10);
+
+//creating the red ring with 1 element attached to the ring
+const black_ball = new THREE.Mesh(new THREE.SphereGeometry(0.6, 40, 40,10,10,10,10), new THREE.MeshStandardMaterial({ color: "#FFFFFF"}));
+const red_ring = new THREE.Mesh(new THREE.TorusGeometry(9, 0.33, 30, 100), new THREE.MeshStandardMaterial({ color: 0xff0000 } ));
+const ring1_ball = new THREE.Mesh(new THREE.SphereGeometry(0.6, 40, 40, 10, 10 , 10 , 10), new THREE.MeshStandardMaterial({ color: "#FFFFFF"}));
+ring1_ball.position.set(-9,  0.532);
+
+red_ring.position.set(0,0.532);
+black_ball.position.set(9,0.532);
+scene.add(black_ball);
+scene.add(red_ring);
+scene.add(ring1_ball);
+
+
 // creating the 1st ring: 
-const ring1 = new THREE.TorusGeometry( 7.8, .5, 30, 100 );
+const ring1 = new THREE.TorusGeometry( 7.8, .3, 30, 100 );
 const ring1_material = new THREE.MeshStandardMaterial( {
-  color: 0xFFFFFF, 
+  color: "0xFFFFFF", 
   roughness: 0.1, 
 } );
 const torus = new THREE.Mesh( ring1, ring1_material );
+
+
+// creating, positioning, and adding a element to ring 1 (ball: black)
 scene.add( torus );
 
 // creating the 2nd ring: 
-const ring2 = new THREE.TorusGeometry( 7.4, .5, 30, 100 );
+const ring2 = new THREE.TorusGeometry( 7.4, .3, 30, 100 );
 const ring2_material = new THREE.MeshStandardMaterial( {
   color: 0xFFFFFF, 
   roughness: 0.1, 
 } );
 const disc2 = new THREE.Mesh( ring2, ring2_material );
 
+
 scene.add( disc2 );
 
-
 // creating the 3rd ring: 
-const ring3 = new THREE.TorusGeometry( 7.0, 0.5 , 30, 100 );
+const ring3 = new THREE.TorusGeometry( 7.0, 0.3 , 30, 100 );
 const ring3_material = new THREE.MeshStandardMaterial( {
   color: 0xFFFFFF, 
   roughness: 0.1, 
@@ -51,7 +70,7 @@ const disc3 = new THREE.Mesh( ring3, ring3_material );
 scene.add( disc3 );
 
 // creating the 4th ring: 
-const ring4 = new THREE.TorusGeometry( 6.6, 0.5, 30, 100 );
+const ring4 = new THREE.TorusGeometry( 6.6, 0.3, 30, 100 );
 const ring4_material = new THREE.MeshStandardMaterial( {
   color: 0xFFFFFF, 
   roughness: 0.1, 
@@ -62,7 +81,7 @@ scene.add( disc4 );
 
 
 // creating the 5th ring: 0.4 difference in size from the previous ring 
-const ring5 = new THREE.TorusGeometry( 6.2, 0.5, 30, 100 );
+const ring5 = new THREE.TorusGeometry( 6.2, 0.3, 30, 100 );
 const ring5_material = new THREE.MeshStandardMaterial( {
   color: 0xFFFFFF, 
   roughness: 0.1, 
@@ -72,17 +91,16 @@ const disc5 = new THREE.Mesh( ring5, ring5_material );
 scene.add( disc5 );
 
 // creating the 6th ring: 0.4 difference in size from the previous ring 
-const ring6 = new THREE.TorusGeometry( 5.8, 0.5, 30, 100 );
+const ring6 = new THREE.TorusGeometry( 5.8, 0.3, 30, 100 );
 const ring6_material = new THREE.MeshStandardMaterial( {
   color: 0xFFFFFF, 
   roughness: 0.1, 
 } );
 const disc6 = new THREE.Mesh( ring6, ring6_material );
-
 scene.add( disc6 );
 
 // creating the 7th ring: 0.4 difference in size from the previous ring 
-const ring7 = new THREE.TorusGeometry( 5.4, 0.5, 30, 100 );
+const ring7 = new THREE.TorusGeometry( 5.4, 0.3, 30, 100 );
 const ring7_material = new THREE.MeshStandardMaterial( {
   color: 0xFFFFFF, 
   roughness: 0.1, 
@@ -139,6 +157,19 @@ scene.add(fourthball_mesh)
 
 
 
+
+// creating and postioning the element1 ball.
+const element1_material = new THREE.MeshStandardMaterial ({
+  color: "#FFFF33", 
+
+  roughness: 0.5,
+})
+
+const element1_mesh= new THREE.Mesh(element1, element1_material);
+element1_mesh.position.set(1,3,1);
+
+scene.add(element1_mesh)
+
 //sizes
 const sizes = {
   width: window.innerWidth, 
@@ -158,7 +189,7 @@ const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 
 
 
 //change the camera position
-camera.position.z = 20 // the metric for this number can be anython based on what you are making
+camera.position.z = 28 // the metric for this number can be anython based on what you are making
 scene.add(camera)
 
 
@@ -211,10 +242,20 @@ tl.fromTo('title', {opacity:0}, {opacity:1})
 function animate() {
   requestAnimationFrame (animate);
   torus.rotation.x += 0.02;
-	torus.rotation.y += 0.02;
+  ring1_ball.rotation.x += 0.02; 
+  ring1_ball.rotation.y += 0.02; 
+
+
+  // this is the red ring rotaion control
+  red_ring.rotation.x += - 0.02; 
+
+
 
   disc2.rotation.x += 0.03;
-	disc2.rotation.y += 0.03;
+  disc2.rotation.y += 0.03;
+ 
+  
+
 
   disc3.rotation.x += 0.04;
   disc3.rotation.y += 0.04; 
