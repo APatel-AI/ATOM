@@ -1,0 +1,102 @@
+body {background-color: black;}
+html{ overflow-x: hidden; font-family: "Poppins", sans-serif;}
+.webgl{ position: absolute; top: 0; left: 0; z-index: 1;}
+
+
+nav{
+    color: whitesmoke;
+    z-index: 2;
+    position: relative;
+    padding: 4rem 8rem;
+    display: flex; 
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: "Inconsolata";
+    font-size: larger;
+    
+
+}
+a:hover{
+  background-color: grey;
+  opacity: unset;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+
+}
+
+.title{
+    color: whitesmoke;
+    z-index: 2;
+    font-size:  3rem;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding-top:0rem;
+}
+@media screen and (max-width: 500px){
+  .title{
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+    z-index: 2;
+    text-align: center;
+    padding-top:0rem;
+
+  }
+  #bottom{
+    bottom: 0;
+    right: 1;
+    z-index: 2;
+    color: white;
+    font-size:  0.9rem;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+}
+}
+    @media screen and (max-width: 500px){
+  .title{
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    color: whitesmoke;
+    z-index: 2;
+    padding-top:0rem;
+  }
+
+  #bottom{
+    bottom: 0;
+    right: 1;
+    z-index: 2;
+    color: white;
+    font-size:  0.9rem;
+    font-family: "Inconsolata";
+    width: 100%;
+}
+}
+#bottom{
+    bottom: 0;
+    right: 1;
+    z-index: 2;
+    color: white;
+    font-size:  0.9rem;
+    font-family: "Inconsolata";
+    width: 100%;
+}
+
+p{
+  color: whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding-top: 50px;
+  font-size: large;
+  padding-left: 45px;
+  padding-right: 45px;
+
+}
