@@ -1,4 +1,4 @@
-<h2> Shape Animation </h2>
+<h1> Shape Animation </h1>
 
 <h4>
 This is a three.js project designed to experiment with creating interactive shapes using three.js. 
